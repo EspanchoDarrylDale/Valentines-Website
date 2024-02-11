@@ -1,0 +1,95 @@
+body {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Georgia", serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.gif {
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+}
+
+.options {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    transition: background-color 0.3s ease;
+    font-family: "Georgia", serif;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+button:focus {
+    outline: none;
+}
+
+button#no {
+    background-color: #f44336; /* Red */
+}
+
+button#no:hover {
+    background-color: #d32f2f; /* Darker red */
+    animation: shake 0.5s ease; /* Apply shake animation */
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+#heart-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the heart container */
+}
+
+.heart {
+    width: 40px;
+    height: 40px;
+    background-color: yellow; /* Flower color */
+    clip-path: polygon(
+        50% 0%,
+        62% 25%,
+        100% 50%,
+        62% 75%,
+        50% 100%,
+        38% 75%,
+        0% 50%,
+        38% 25%
+    ); /* Define flower shape */
+    animation: float 4s linear; /* Apply float animation */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
